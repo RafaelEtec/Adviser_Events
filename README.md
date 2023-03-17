@@ -15,4 +15,4 @@ CRUD - ASSESSOR \
 CRUD - USUÁRIO \
  ° Nome \
  ° Email \
- ° Data de Nascimento \
+ ° Data de Nascimento
