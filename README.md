@@ -18,3 +18,6 @@ CRUD - USUÁRIO \
  ° Data de Nascimento
  
 Veja nosso [FIGMA](https://www.figma.com/proto/OAzkXwq1ffx2b0fwLt4doa/Adviser-Events---Projeto-Integrador?node-id=601-864&scaling=scale-down&page-id=0%3A1&starting-point-node-id=601%3A864)
+
+MER: 
+![MER](/MER.png)
