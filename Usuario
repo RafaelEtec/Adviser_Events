@@ -1,0 +1,21 @@
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CadastroServlet extends HttpServlet {
+    
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+        String nome = request.getParameter("Nome");
+        String email = request.getParameter("Email");
+        String datadenascimento = request.getParameter("DataDeNascimento");
+        
+        Usuario usuario = new Usuario(nome, email, datadenascimento);
+        UsuarioDao dao = new UsuarioDao();
+        dao.adicionar(usuario);
+        
+        response.sendRedirect("sucesso.html");
+    }
+}
