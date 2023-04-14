@@ -1,0 +1,41 @@
+
+.container {
+    background-color: white;
+}
+
+.greetings {
+    position: relative;
+    width: 720px;
+    height: 264px;
+    left: 80px;
+    top: 200px;
+}
+
+.greet1 {
+    fill: solid;
+    align: left;
+    font-style: ExtraBold;
+    letter: -4%;
+    line-height: 93%;
+    font-size: 76px;
+    weight: bold;
+    color: #181E4B;
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+.greet2 {
+    weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 40px;
+    color: #5E6282;
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+.logo {
+    position: relative;
+    left: 1100px;
+    top: -50px;
+    width: 525px;
+    height: 454px;
+}
