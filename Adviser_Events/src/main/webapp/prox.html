@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html>
+    <head>
+        <title>Adviser Events</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/prox.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="container">
+            <div class="divVoltar">
+                <button class="btnVoltar" >
+                    <a href="index.html">Voltar</a>
+                </button>
+            </div>
 
-</body>
+            <div class="divTitle">
+                <p class="pCrie">Crie sua conta de Visitante</p>
+            </div>
+
+            <div class="divForm">
+                <form action="/create-us" method="post">
+                    <label class="lblUs">Nome completo</label><br>
+                    <input class="inpUs" type="text" name="us-nome" id="us-nome"><br>
+                    <label class="lblUs">E-mail</label><br>
+                    <input class="inpUs" type="text" name="us-email" id="us-email"><br>
+                    <label class="lblUs">Data de Nascimento</label><br>
+                    <input class="inpUs" type="text" name="us-nasc" id="us-nasc"><br>
+                    <button class="btnAvancar" type="submit">Avançar</button>
+                </form>
+            </div>
+
+            <img src="imgs/logo.png" alt="Logo da Adviser events">
+            
+        </header>
+    </body>
 </html>

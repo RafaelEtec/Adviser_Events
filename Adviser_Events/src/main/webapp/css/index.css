@@ -1,23 +1,31 @@
-
-.container {
+.fundo {
     background-color: white;
 }
 
-.greetings {
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    align-content: start;
+    margin-top: 10%;
+    width: auto;
+    height: auto;
     position: relative;
-    width: 720px;
-    height: 264px;
-    left: 80px;
-    top: 200px;
+    left: 10%;
+}
+
+.greetings {
+    width: auto;
+    height: 50%;
 }
 
 .greet1 {
-    fill: solid;
     align: left;
-    font-style: ExtraBold;
     letter: -4%;
     line-height: 93%;
-    font-size: 76px;
+    font-size: 400%;
     weight: bold;
     color: #181E4B;
     font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
@@ -26,24 +34,26 @@
 .greet2 {
     weight: 500;
     font-size: 15px;
-    line-height: 30px;
-    margin-top: 40px;
+    line-height: 180%;
+    margin-top: 5%;
     color: #5E6282;
     font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
 }
 
+.divLogo {
+    position: absolute;
+    left: 48%;
+    bottom: 12%;
+}
+
 .logo {
-    position: relative;
-    left: 1100px;
-    top: -50px;
-    width: 525px;
-    height: 454px;
+    width: 70%;
+    height: 50%;
 }
 
 .btnProsseguir {
     position: relative;
-    left: 80px;
-    top: -150px;
+    margin-top: 2%;
     background-color: #B6B8BE;
     border-radius: 10px;
     border-style: none;
@@ -53,6 +63,8 @@
 }
 
 .playbtn {
+    position: relative;
+    left: 20%;
     width: 80px;
     height: 80px;
 }

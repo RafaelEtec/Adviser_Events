@@ -1,1 +1,6 @@
+dao\usDAO.class
 servlet\CreateEventServlet.class
+model\Usuario.class
+dao\asDAO.class
+model\Assessor.class
+servlet\CreateUsServlet.class
