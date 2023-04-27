@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adviser Events</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/prox.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="container">
+    <div class="divVoltar">
+        <button class="btnVoltar" >
+            <a href="dashboard.jsp">Voltar</a>
+        </button>
+    </div>
+
+    <div class="divTitle">
+        <p class="pCrie">Publique um Evento</p>
+    </div>
+
+    <div class="divFormEV">
+        <form action="/create-ev" method="post">
+            <label class="lblEv">Nome do Evento</label><br>
+            <input class="inpEv" type="text" name="ev-nome" id="ev-nome"><br>
+            <label class="lblEv">Descrição</label><br>
+            <input class="inpEv" type="text" name="ev-desc" id="ev-desc"><br>
+            <label class="lblEv">Data</label><br>
+            <input class="inpEv" type="text" name="ev-data" id="ev-data"><br>
+            <label class="lblEv">Hora</label><br>
+            <input class="inpEv" type="text" name="ev-hora" id="ev-hora"><br>
+            <label class="lblEv">Endereço</label><br>
+            <input class="inpEv" type="text" name="ev-local" id="ev-local"><br>
+            <button class="btnPublicarEV" type="submit">Publicar</button>
+        </form>
+    </div>
+    <div class="divLogo">
+        <img class="logo" src="imgs/logo.png" alt="Logo Adviser events">
+    </div>
+</header>
+</body>
+</html>

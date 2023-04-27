@@ -1,16 +1,27 @@
 package model;
 
 public class Usuario {
+    private String id;
     private String nome;
     private String email;
     private String nasc;
+    private String pass = "@123";
 
     public Usuario() {}
 
-    public Usuario(String nome, String email, String nasc) {
+    public Usuario(String nome, String email, String nasc, String pass) {
         this.nome = nome;
         this.email = email;
         this.nasc = nasc;
+        this.pass = pass;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -35,5 +46,13 @@ public class Usuario {
 
     public void setNasc(String nasc) {
         this.nasc = nasc;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 }

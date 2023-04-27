@@ -1,5 +1,8 @@
 package servlet;
 
+import dao.usDAO;
+import model.Usuario;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +18,10 @@ public class CreateUsServlet extends HttpServlet {
         String us_nome = req.getParameter("us-nome");
         String us_email = req.getParameter("us-email");
         String us_nasc = req.getParameter("us-nasc");
+        String us_pass = "@123";
 
-        req.getRequestDispatcher("prox.html").forward(req, resp);
+        Usuario us = new Usuario(us_nome, us_email, us_nasc, us_pass);
+        new usDAO().addUser(us);
+        req.getRequestDispatcher("optionUS.html").forward(req, resp);
     }
 }

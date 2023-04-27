@@ -34,6 +34,14 @@ html {
     left: 10%;
 }
 
+.divFormAS {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 2%;
+    left: 10%;
+}
+
 .pCrie {
     align: left;
     letter: -4%;
@@ -65,4 +73,25 @@ html {
     border-radius: 6px;
     width: 20.4%;
     height: 40px;
+}
+
+.btnAvancarAS {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    background: grey;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    width: 20.4%;
+    height: 40px;
+}
+
+.divLogo {
+    position: absolute;
+    left: 50%;
+    bottom: 12%;
+}
+
+.logo {
+    width: 70%;
+    height: 50%;
 }
