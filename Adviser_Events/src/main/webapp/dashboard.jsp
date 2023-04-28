@@ -17,19 +17,19 @@
                     <th>Local</th>
                     <th>Assessor</th>
                 </tr>
-                <c:forEach var="ev" items="${ev}">
+                <c:forEach var="ev" items="${eventos}">
                     <tr>
-                        <td>${ev.ev_NOME}</td>
-                        <td>${ev.ev_DESC}</td>
-                        <td>${ev.ev_DATA}</td>
-                        <td>${ev.ev_HORA}</td>
-                        <td>${ev.ev_LOCAL}</td>
-                        <td>${ev.ev_ASSESSOR}</td>
+                        <td>${ev.nome}</td>
+                        <td>${ev.desc}</td>
+                        <td>${ev.data}</td>
+                        <td>${ev.hora}</td>
+                        <td>${ev.local}</td>
+                        <td>${ev.ass}</td>
                     </tr>
                 </c:forEach>
             </table>
         </div>
-        <form action="/list-events" method="get">
+        <form action="/list-events" method="post">
             <button><a href="dashboard.jsp">Atualizar</a></button>
         </form>
         <button><a href="criaEV.html">Criar Evento</a></button>

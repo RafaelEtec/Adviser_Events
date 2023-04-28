@@ -27,6 +27,6 @@ public class CreateEventServlet extends HttpServlet {
 
         Evento ev = new Evento(ev_nome, ev_desc, ev_data, ev_hora, ev_local, ev_ass);
         new evDAO().addEvent(ev);
-        req.getRequestDispatcher("dashboard.jsp").forward(req, resp);
+        resp.sendRedirect("list-events");
     }
 }
