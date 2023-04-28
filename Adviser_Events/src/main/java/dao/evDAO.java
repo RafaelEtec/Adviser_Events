@@ -33,7 +33,7 @@ public class evDAO {
     }
 
     public List<Evento> listEvents() {
-        String sql = "SELECT * FROM tb_EVENTO";
+        String sql = "SELECT ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR FROM tb_EVENTO";
 
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -43,14 +43,14 @@ public class evDAO {
             List<Evento> ev = new ArrayList<>();
 
             while (rs.next()) {
-                String evNOME = rs.getString("ev_NOME");
-                String evDESC = rs.getString("ev_DESC");
-                String evDATA = rs.getString("ev_DATA");
-                String evHORA = rs.getString("ev_HORAS");
-                String evLOCAL= rs.getString("ev_LOCAL");
-                int evASS = rs.getInt("ev_ASSESSOR");
+                String ev_NOME = rs.getString("ev_NOME");
+                String ev_DESC = rs.getString("ev_DESC");
+                String ev_DATA = rs.getString("ev_DATA");
+                String ev_HORA = rs.getString("ev_HORA");
+                String ev_LOCAL= rs.getString("ev_LOCAL");
+                int ev_ASS = rs.getInt("ev_ASSESSOR");
 
-                Evento evento = new Evento(evNOME, evDESC, evDATA, evHORA, evLOCAL, evASS);
+                Evento evento = new Evento(ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASS);
                 ev.add(evento);
             }
             System.out.println("Sucesso na pesquisa!");
