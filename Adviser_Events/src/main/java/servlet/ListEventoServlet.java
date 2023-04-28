@@ -15,8 +15,8 @@ import java.util.List;
 public class ListEventoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Evento> ev = new evDAO().listEvents();
-        req.setAttribute("eventos", ev);
+        List<Evento> eventos = new evDAO().listEvents();
+        req.setAttribute("eventos", eventos);
         req.getRequestDispatcher("dashboard.jsp").forward(req,resp);
     }
 }
