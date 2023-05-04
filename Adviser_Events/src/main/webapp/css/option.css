@@ -1,0 +1,55 @@
+.fundo {
+    background-color: white;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    align-content: center;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.btnCriar {
+    position: relative;
+    margin-top: 10px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    border-style: solid #7C7C7C;
+    width: 240px;
+    height: 60px;
+}
+
+.btnCriar {
+    margin-top: 2%;
+}
+
+.btnLogin {
+    position: relative;
+    background-color: #7C7C7C;
+    border-radius: 10px;
+    border-style: none;
+    width: 240px;
+    height: 60px;
+}
+
+.btnCriar a {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    color: #C7C7C;
+    weight: 500;
+}
+
+.btnLogin a {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    color: #fff;
+    weight: 800;
+}
+
+a:link {
+    text-decoration: none;
+}
