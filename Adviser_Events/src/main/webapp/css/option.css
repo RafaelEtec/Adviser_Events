@@ -9,9 +9,11 @@ html {
 
 .container {
     align-content: center;
-    position: relative;
+    position: absolute;
     width: auto;
     height: auto;
+    left: 42%;
+    top: 20%;
 }
 
 .btnCriar {
@@ -27,6 +29,10 @@ html {
 
 .btnCriar {
     margin-top: 2%;
+}
+
+.divBotoes {
+    align: center;
 }
 
 .btnLogin {
