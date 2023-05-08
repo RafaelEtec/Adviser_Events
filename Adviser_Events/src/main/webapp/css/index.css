@@ -43,7 +43,7 @@ html {
 .divLogo {
     position: absolute;
     left: 48%;
-    bottom: 12%;
+    bottom: -12%;
 }
 
 .logo {

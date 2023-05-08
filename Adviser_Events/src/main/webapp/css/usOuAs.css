@@ -1,0 +1,73 @@
+.fundo {
+    background-color: white;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.container {
+    align-content: center;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 34%;
+    top: 10%;
+}
+
+.divBotoes {
+    align-content: center;
+}
+
+.btnAS {
+    position: relative;
+    left: 30%;
+    margin-top: 10px;
+}
+
+.btnUS {
+    position: relative;
+    left: 30%;
+    margin-top: 10px;
+}
+
+.imgSau {
+    width: 100%;
+}
+
+.btnAS {
+    position: relative;
+    margin-top: 2%;
+    background-color: #7C7C7C;
+    border-radius: 10px;
+    border-style: none;
+    width: 240px;
+    height: 60px;
+}
+
+.btnUS {
+    position: relative;
+    margin-top: 2%;
+    background-color: #fff;
+    border-radius: 10px;
+    border-style: solid #7C7C7C;
+    width: 240px;
+    height: 60px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.btnAS a {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    color: white;
+    weight: 500;
+}
+
+.btnUS a {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    color: #7C7C7C;
+    weight: 800;
+}

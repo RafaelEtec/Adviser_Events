@@ -4,6 +4,7 @@ import model.Usuario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class usDAO {
     public void addUser(Usuario us) {
@@ -23,5 +24,28 @@ public class usDAO {
         } catch (Exception ex) {
             System.out.println("Erro no cadastro!");
         }
+    }
+
+    public boolean login(String email, String pass) {
+        String sql = "SELECT us_PASS FROM tb_USUARIO WHERE us_EMAIL = ? AND us_PASS = ?";
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, email);
+            ps.setString(2, pass);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.isBeforeFirst()) {
+                return true;
+            } else {
+                return false;
+            }
+            con.close();
+        } catch (Exception ex) {
+            System.out.println("Erro na busca!");
+        }
+        return false;
     }
 }
