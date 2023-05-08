@@ -1,0 +1,47 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+th {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+td {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+
+}
+
+.divLogo {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.logo {
+    width: 250px;
+    height: 200px;
+}
+
+.divPesq {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 40%;
+    left: 5%;
+}
+
+.tdData {
+    padding-left: 10px;
+}
+
+.tdHora {
+    padding-left: 20px;
+}

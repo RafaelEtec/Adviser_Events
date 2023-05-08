@@ -24,8 +24,9 @@ public class CreateEventServlet extends HttpServlet {
         String ev_hora = req.getParameter("ev-hora");
         String ev_local = req.getParameter("ev-local");
         int ev_ass = 1;
+        int ev_pre = 0;
 
-        Evento ev = new Evento(ev_nome, ev_desc, ev_data, ev_hora, ev_local, ev_ass);
+        Evento ev = new Evento(ev_nome, ev_desc, ev_data, ev_hora, ev_local, ev_ass, ev_pre);
         new evDAO().addEvent(ev);
         resp.sendRedirect("list-events");
     }

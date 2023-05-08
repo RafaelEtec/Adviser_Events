@@ -12,13 +12,14 @@ public class Evento {
 
     public Evento() {}
 
-    public Evento(String nome, String desc, String data, String hora, String local, int ass) {
+    public Evento(String nome, String desc, String data, String hora, String local, int ass, int pre) {
         this.nome = nome;
         this.desc = desc;
         this.data = data;
         this.hora = hora;
         this.local = local;
         this.ass = ass;
+        this.pre = pre;
     }
 
     public int getId() {

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class evDAO {
     public void addEvent(Evento ev) {
-        String sql = "INSERT INTO TB_EVENTO (ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR) VALUES (?,?,?,?,?,?)";
+        String sql = "INSERT INTO TB_EVENTO (ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS) VALUES (?,?,?,?,?,?,?)";
 
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -24,6 +24,7 @@ public class evDAO {
             ps.setString(4, ev.getHora());
             ps.setString(5, ev.getLocal());
             ps.setInt(6, ev.getAss());
+            ps.setInt(7, ev.getPre());
             ps.execute();
             System.out.println("Sucesso no cadastro!");
             con.close();
@@ -33,7 +34,7 @@ public class evDAO {
     }
 
     public List<Evento> listEvents() {
-        String sql = "SELECT ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR FROM tb_EVENTO";
+        String sql = "SELECT ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS FROM tb_EVENTO";
 
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -49,8 +50,9 @@ public class evDAO {
                 String ev_HORA = rs.getString("ev_HORA");
                 String ev_LOCAL= rs.getString("ev_LOCAL");
                 int ev_ASS = rs.getInt("ev_ASSESSOR");
+                int ev_PRE = rs.getInt("ev_PRESENCAS");
 
-                Evento evento = new Evento(ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASS);
+                Evento evento = new Evento(ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASS, ev_PRE);
                 ev.add(evento);
             }
             System.out.println("Sucesso na pesquisa!");

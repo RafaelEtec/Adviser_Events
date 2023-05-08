@@ -38,11 +38,12 @@ public class usDAO {
             ResultSet rs = ps.executeQuery();
 
             if (rs.isBeforeFirst()) {
+                con.close();
                 return true;
             } else {
+                con.close();
                 return false;
             }
-            con.close();
         } catch (Exception ex) {
             System.out.println("Erro na busca!");
         }
