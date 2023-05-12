@@ -5,7 +5,7 @@ public class Usuario {
     private String nome;
     private String email;
     private String nasc;
-    private String pass = "@123";
+    private String pass;
 
     public Usuario() {}
 

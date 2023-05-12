@@ -16,11 +16,8 @@ public class CreateEventServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String ev_nome = req.getParameter("ev-nome");
-        System.out.println(ev_nome);
         String ev_desc = req.getParameter("ev-desc");
-        System.out.println(ev_desc);
         String ev_data = req.getParameter("ev-data");
-        System.out.println(ev_data);
         String ev_hora = req.getParameter("ev-hora");
         String ev_local = req.getParameter("ev-local");
         int ev_ass = 1;
