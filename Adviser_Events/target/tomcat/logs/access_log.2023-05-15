@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:16 -0300] "GET / HTTP/1.1" 304 - http-bio-8080-exec-1 117
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:16 -0300] "GET /css/index.css HTTP/1.1" 304 - http-bio-8080-exec-3 5
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:16 -0300] "GET /css/reset.css HTTP/1.1" 304 - http-bio-8080-exec-4 6
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:16 -0300] "GET /imgs/playBtn.png HTTP/1.1" 304 - http-bio-8080-exec-5 6
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:16 -0300] "GET /imgs/logo.png HTTP/1.1" 304 - http-bio-8080-exec-6 6
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:17 -0300] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-7 5
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:18 -0300] "GET /usOuAs.html HTTP/1.1" 304 - http-bio-8080-exec-8 5
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:18 -0300] "GET /css/usOuAs.css HTTP/1.1" 200 1132 http-bio-8080-exec-9 6
+0:0:0:0:0:0:0:1 - - [15/May/2023:11:18:18 -0300] "GET /imgs/ola.png HTTP/1.1" 200 79950 http-bio-8080-exec-2 7

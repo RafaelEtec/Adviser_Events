@@ -18,6 +18,52 @@ html {
     margin-top: 5%;
 }
 
+.divFormUS {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 10%;
+    left: 10%;
+}
+
+.btnAS {
+    position: relative;
+    margin-top: 2%;
+    background-color: #7C7C7C;
+    border-radius: 10px;
+    border-style: none;
+    width: 240px;
+    height: 60px;
+}
+
+.btnUS {
+    position: relative;
+    margin-top: 2%;
+    background-color: #7C7C7C;
+    border-radius: 10px;
+    border-style: none;
+    width: 240px;
+    height: 60px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    color: white;
+    weight: 500;
+}
+
+.divFormAS {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 10%;
+    left: 10%;
+}
+
 .divTitle {
     position: absolute;
     width: auto;
