@@ -1,0 +1,97 @@
+html {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.btnVoltar {
+    background-image: url("imgs/returnArrow.png") no-repeat;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+.divVoltar {
+    position: relative;
+    width: auto;
+    height: auto;
+    left: 10%;
+    margin-top: 5%;
+}
+
+.divTitle {
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 40%;
+    top: 13%;
+}
+
+.divForm {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 6%;
+    left: 10%;
+}
+
+.divFormAS {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-top: 2%;
+    left: 10%;
+}
+
+.pCrie {
+    align: left;
+    letter: -4%;
+    font-size: 160%;
+    weight: bold;
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+.lblUs {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+.inpUs {
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+    border: none;
+    color: grey;
+    width: 20%;
+    border-bottom: 1px solid lightgrey;
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+.btnAvancar {
+    margin-top: 3%;
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    background: grey;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    width: 20.4%;
+    height: 40px;
+}
+
+.btnAvancarAS {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    background: grey;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    width: 20.4%;
+    height: 40px;
+}
+
+.divLogo {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+}
+
+.logo {
+    width: 70%;
+    height: 50%;
+}

@@ -3,6 +3,8 @@ html {
     overflow-y: hidden;
 }
 
+
+
 .btnVoltar {
     background-image: url("imgs/returnArrow.png") no-repeat;
     border: none;
@@ -52,7 +54,30 @@ a:link {
 
 a {
     font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
-    color: white;
+    color: black;
+    weight: 500;
+}
+
+.divLogo {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+}
+
+.logo {
+    width: 70%;
+    height: 50%;
+}
+
+.lblUs {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    color: black;
+    weight: 500;
+}
+
+.inpUs {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    color: black;
     weight: 500;
 }
 

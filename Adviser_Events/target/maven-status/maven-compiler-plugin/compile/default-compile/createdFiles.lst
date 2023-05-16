@@ -1,10 +1,15 @@
 dao\usDAO.class
 dao\evDAO.class
-dao\asDAO.class
+servlet\ListEventByAss.class
+servlet\ListEventoServletUS.class
+servlet\LoginUsServlet.class
 servlet\ListEventoServlet.class
-model\Evento.class
 servlet\CreateAsServlet.class
 servlet\CreateEventServlet.class
 model\Usuario.class
 model\Assessor.class
 servlet\CreateUsServlet.class
+dao\asDAO.class
+model\Evento.class
+servlet\ConfPresServlet.class
+servlet\LoginAsServlet.class

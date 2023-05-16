@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <%@ page contentType="text/html; charset=UTF-8" %>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <head>
         <meta charset="UTF-8">
@@ -31,15 +32,22 @@
                                     <td class="tdLocal">${ev.local}</td>
                                     <td class="tdPre">${ev.pre}</td>
                                 </tr>
+                                <td>
+                                   <form action="/conf-presenca" method="post">
+                                   <input type="hidden" id="id" name="id" value="${ev.id}">
+                                   <button type="submit">confirmar</button>
+                                </td>
+                                <td>
+                                   <button>compartilhar</button>
+                                </td>
                             </tr>
                         </div>
                     </c:forEach>
                 </table>
             </div>
         </header>
-        <form action="/list-events" method="post">
-            <button><a href="dashboard.jsp">Atualizar</a></button>
+        <form action="/list-events-us" method="get">
+            <button type="submit">Atualizar</a></button>
         </form>
-        <button><a href="criaEV.html">Criar Evento</a></button>
     </body>
 </html>

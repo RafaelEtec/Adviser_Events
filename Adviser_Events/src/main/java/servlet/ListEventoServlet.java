@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/list-events")
+@WebServlet("/list-events-as")
 public class ListEventoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Evento> eventos = new evDAO().listEvents();
         req.setAttribute("eventos", eventos);
-        req.getRequestDispatcher("dashboard.jsp").forward(req,resp);
+        req.getRequestDispatcher("dashboardAS.jsp").forward(req,resp);
     }
 }

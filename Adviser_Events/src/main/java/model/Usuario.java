@@ -2,14 +2,16 @@ package model;
 
 public class Usuario {
     private String id;
+    private String img;
     private String nome;
     private String email;
     private String nasc;
-    private String pass = "@123";
+    private String pass;
 
     public Usuario() {}
 
-    public Usuario(String nome, String email, String nasc, String pass) {
+    public Usuario(String img, String nome, String email, String nasc, String pass) {
+        this.img = img;
         this.nome = nome;
         this.email = email;
         this.nasc = nasc;
@@ -22,6 +24,14 @@ public class Usuario {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getNome() {
