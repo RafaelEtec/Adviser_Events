@@ -98,6 +98,7 @@ public class usDAO {
                 saida = true;
                 System.out.println("Sucesso na exclusão");
             }
+            con.close();
         } catch (Exception ex) {
             System.out.println("Erro na exclusão!");
         }

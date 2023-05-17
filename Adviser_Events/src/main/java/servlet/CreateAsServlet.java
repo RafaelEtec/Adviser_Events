@@ -13,6 +13,7 @@ public class CreateAsServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String as_img = null;
         String as_nome = req.getParameter("as-nome");
         String as_email = req.getParameter("as-email");
         String as_cpf = req.getParameter("as-cpf");
@@ -21,7 +22,7 @@ public class CreateAsServlet extends HttpServlet {
         String as_end = req.getParameter("as-end");
         String as_pass = "@123";
 
-        Assessor as = new Assessor(as_nome, as_email, as_cpf, as_num, as_nasc, as_end, as_pass);
+        Assessor as = new Assessor(as_img, as_nome, as_email, as_cpf, as_num, as_nasc, as_end, as_pass);
         new asDAO().addUser(as);
         req.getRequestDispatcher("optionAS.html").forward(req, resp);
     }

@@ -1,5 +1,6 @@
 package servlet;
 
+import model.Assessor;
 import model.Evento;
 import dao.evDAO;
 
@@ -17,6 +18,7 @@ public class ListEventoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Evento> eventos = new evDAO().listEvents();
         req.setAttribute("eventos", eventos);
+        req.setAttribute("id", req.getSession().getAttribute("as_id"));
         req.getRequestDispatcher("dashboardAS.jsp").forward(req,resp);
     }
 }

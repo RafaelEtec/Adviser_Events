@@ -2,6 +2,7 @@ package model;
 
 public class Assessor {
     private int id;
+    private String img;
     private String nome;
     private String email;
     private String cpf;
@@ -12,7 +13,7 @@ public class Assessor {
 
     public Assessor() {}
 
-    public Assessor(String nome, String email, String cpf, String num, String nasc, String end, String pass) {
+    public Assessor(String img, String nome, String email, String cpf, String num, String nasc, String end, String pass) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
@@ -20,6 +21,17 @@ public class Assessor {
         this.nasc = nasc;
         this.end = end;
         this.pass = pass;
+    }
+
+    public Assessor(int id, String img, String nome, String email, String cpf, String num, String nasc, String end) {
+        this.id = id;
+        this.img = img;
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+        this.num = num;
+        this.nasc = nasc;
+        this.end = end;
     }
 
     public int getId() {

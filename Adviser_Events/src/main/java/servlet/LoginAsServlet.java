@@ -1,6 +1,7 @@
 package servlet;
 
 import dao.asDAO;
+import model.Assessor;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +21,8 @@ public class LoginAsServlet extends HttpServlet{
         System.out.println(as_email + "\t" + as_pass);
         boolean resposta = new asDAO().login(as_email, as_pass);
         if (resposta) {
+            Assessor ass = new asDAO().pegaPorEmail(as_email);
+            req.getSession().setAttribute("ass", ass);
             resp.sendRedirect("list-events-as");
         } else {
             resp.sendRedirect("loginAS.html");

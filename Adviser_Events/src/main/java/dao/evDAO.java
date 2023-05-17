@@ -101,11 +101,29 @@ public class evDAO {
         }
     }
 
-    public boolean coferirPresenca(String id_ev, String id_us) {
-        String sql = "SELECT pr_ev_id FROM tb_PRESENCAS WHERE pr_ev_id = ? and pr_us_id = ?";
+    public boolean conferirPresenca(String id_ev, String id_us) {
+        String sql = "SELECT pr_us_id FROM tb_PRESENCAS WHERE pr_ev_id = ? and pr_us_id = ?";
         boolean saida = false;
+        String resp = "";
 
         try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, id_ev);
+            ps.setString(2, id_us);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                resp = rs.getString("pr_us_id");
+            }
+            if (resp.equals(id_us)) {
+                excluirPresenca(id_ev, id_us);
+                saida = false;
+            } else {
+                criarPresenca(id_ev, id_us);
+                saida = true;
+            }
 
         } catch (Exception ex) {
             System.out.println("Erro no cadastro!");
@@ -113,10 +131,65 @@ public class evDAO {
         return saida;
     }
 
-    public boolean confirmarPresenca(String id) {
+    public void criarPresenca(String id_ev, String id_us) {
+        String sql = "INSERT INTO tb_PRESENCAS VALUES (?, ?)";
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, id_ev);
+            ps.setString(2, id_us);
+            ps.execute();
+            System.out.println("Sucesso na criação");
+            con.close();
+        } catch (Exception ex) {
+            System.out.println("Erro na criação!");
+        }
+    }
+
+    public void excluirPresenca(String id_ev, String id_us) {
+        String sql = "DELETE tb_PRESENCAS WHERE pr_ev_id = ? AND pr_us_id = ?";
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, id_ev);
+            ps.setString(2, id_us);
+            int l = ps.executeUpdate();
+            if (l > 0) {
+                System.out.println("Sucesso na exclusão");
+            }
+            con.close();
+        } catch (Exception ex) {
+            System.out.println("Erro na exclusão");
+        }
+    }
+
+    public boolean alterarPresenca(String id_ev, String id_us) {
         String sqlNao = "UPDATE tb_EVENTO SET ev_PRESENCAS = ev_PRESENCAS + 1 WHERE ev_ID = ?";
         String sqlSim = "UPDATE tb_EVENTO SET ev_PRESENCAS = ev_PRESENCAS - 1 WHERE ev_ID = ?";
         boolean saida = false;
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps;
+            if (conferirPresenca(id_ev, id_us)) {
+                ps = con.prepareStatement(sqlNao);
+                System.out.println("Presença confirmada");
+            } else {
+                ps = con.prepareStatement(sqlSim);
+                System.out.println("Presença cancelada");
+            }
+            ps.setString(1, id_ev);
+            ps.execute();
+            System.out.println("Presença alterada");
+            con.close();
+        } catch (Exception ex) {
+            System.out.println("Erro no cadastro!");
+        }
         return saida;
     }
 }
