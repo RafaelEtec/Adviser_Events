@@ -24,6 +24,6 @@ public class CreateAsServlet extends HttpServlet {
 
         Assessor as = new Assessor(as_img, as_nome, as_email, as_cpf, as_num, as_nasc, as_end, as_pass);
         new asDAO().addUser(as);
-        req.getRequestDispatcher("optionAS.html").forward(req, resp);
+        req.getRequestDispatcher("infoAS.html").forward(req, resp);
     }
 }
