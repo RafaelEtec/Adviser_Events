@@ -101,7 +101,7 @@ public class evDAO {
         }
     }
 
-    public boolean conferirPresenca(String id_ev, String id_us) {
+    public boolean conferirPresenca(String id_ev, int id_us) {
         String sql = "SELECT pr_us_id FROM tb_PRESENCAS WHERE pr_ev_id = ? and pr_us_id = ?";
         boolean saida = false;
         String resp = "";
@@ -111,7 +111,7 @@ public class evDAO {
             System.out.println("Conectado");
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, id_ev);
-            ps.setString(2, id_us);
+            ps.setInt(2, id_us);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
@@ -131,7 +131,7 @@ public class evDAO {
         return saida;
     }
 
-    public void criarPresenca(String id_ev, String id_us) {
+    public void criarPresenca(String id_ev, int id_us) {
         String sql = "INSERT INTO tb_PRESENCAS VALUES (?, ?)";
 
         try {
@@ -139,7 +139,7 @@ public class evDAO {
             System.out.println("Conectado");
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, id_ev);
-            ps.setString(2, id_us);
+            ps.setInt(2, id_us);
             ps.execute();
             System.out.println("Sucesso na criação");
             con.close();
@@ -148,7 +148,7 @@ public class evDAO {
         }
     }
 
-    public void excluirPresenca(String id_ev, String id_us) {
+    public void excluirPresenca(String id_ev, int id_us) {
         String sql = "DELETE tb_PRESENCAS WHERE pr_ev_id = ? AND pr_us_id = ?";
 
         try {
@@ -156,7 +156,7 @@ public class evDAO {
             System.out.println("Conectado");
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setString(1, id_ev);
-            ps.setString(2, id_us);
+            ps.setInt(2, id_us);
             int l = ps.executeUpdate();
             if (l > 0) {
                 System.out.println("Sucesso na exclusão");
@@ -167,7 +167,7 @@ public class evDAO {
         }
     }
 
-    public boolean alterarPresenca(String id_ev, String id_us) {
+    public boolean alterarPresenca(String id_ev, int id_us) {
         String sqlNao = "UPDATE tb_EVENTO SET ev_PRESENCAS = ev_PRESENCAS + 1 WHERE ev_ID = ?";
         String sqlSim = "UPDATE tb_EVENTO SET ev_PRESENCAS = ev_PRESENCAS - 1 WHERE ev_ID = ?";
         boolean saida = false;

@@ -61,7 +61,7 @@ public class asDAO {
     }
 
     public Assessor pegaPorEmail(String email) {
-        String sql = "SELECT * FROM tb_ASSESSOR WHERE us_ID = ?";
+        String sql = "SELECT as_ID, as_IMG, as_NOME, as_EMAIL, as_CPF, as_NUM, as_NASC, as_END FROM tb_ASSESSOR WHERE as_ID = ?";
         Assessor ass = new Assessor();
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");

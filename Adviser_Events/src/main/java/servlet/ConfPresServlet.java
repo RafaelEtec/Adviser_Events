@@ -15,9 +15,9 @@ public class ConfPresServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String ev_id = req.getParameter("ev_id");
-        String as_id = "1";
+        Assessor as_id = (Assessor) req.getSession().getAttribute("ass");
         System.out.println(ev_id + "\t" + as_id);
-        boolean saida = new evDAO().alterarPresenca(ev_id, as_id);
+        boolean saida = new evDAO().alterarPresenca(ev_id, as_id.getId());
 
         System.out.println(saida);
         resp.sendRedirect("list-events-as");

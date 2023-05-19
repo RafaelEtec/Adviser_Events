@@ -13,7 +13,7 @@
     <body>
         <header>
             <div class="divLogo">
-                <img class="logo" src="imgs/logo.png" alt="Logo Adviser events">
+                <img class="logo" src="img/logo.png" alt="Logo Adviser events">
             </div>
             <div class="divPesq">
                 <table>
@@ -26,7 +26,7 @@
                                     <td>
                                        <form action="/conf-presenca" method="post">
                                        <input type="hidden" id="ev_id" name="ev_id" value="${ev.id}">
-                                       <button type="submit">confirmar</button>
+                                       <button class="btnPre" type="submit">confirmar</button>
                                     </td>
                                     <td>
                                        <button>compartilhar</button>
@@ -41,6 +41,7 @@
                                 </tr>
                             </tr>
                         </div>
+                        <hr>
                     </c:forEach>
                 </table>
             </div>
