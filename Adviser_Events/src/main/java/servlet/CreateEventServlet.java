@@ -1,5 +1,6 @@
 package servlet;
 
+import model.Assessor;
 import model.Evento;
 import dao.evDAO;
 
@@ -20,8 +21,10 @@ public class CreateEventServlet extends HttpServlet {
         String ev_data = req.getParameter("ev-data");
         String ev_hora = req.getParameter("ev-hora");
         String ev_local = req.getParameter("ev-local");
-        int ev_ass = 1;
+        Assessor ass = (Assessor) req.getSession().getAttribute("ass");
+        int ev_ass = ass.getId();
         int ev_pre = 0;
+
 
         Evento ev = new Evento(ev_nome, ev_desc, ev_data, ev_hora, ev_local, ev_ass, ev_pre);
         boolean saida = new evDAO().addEvent(ev);

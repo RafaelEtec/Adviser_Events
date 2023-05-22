@@ -17,6 +17,7 @@
             </div>
             <div class="divPesq">
                 <table>
+                <hr>
                     <c:forEach var="ev" items="${eventos}">
                         <div class="divContent">
                             <tr>
@@ -27,11 +28,13 @@
                                        <form action="/conf-presenca" method="post">
                                        <input type="hidden" id="ev_id" name="ev_id" value="${ev.id}">
                                        <button class="btnPre" type="submit">confirmar</button>
+                                       </form>
                                     </td>
                                     <td>
                                        <button>compartilhar</button>
                                     </td>
                                 <tr>
+                                    <td>${ev.id}</td>
                                     <td class="tdNome">${ev.nome}</td>
                                     <td class="tdDesc">${ev.desc}</td>
                                 </tr>
@@ -41,7 +44,6 @@
                                 </tr>
                             </tr>
                         </div>
-                        <hr>
                     </c:forEach>
                 </table>
             </div>

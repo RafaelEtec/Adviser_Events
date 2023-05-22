@@ -1,6 +1,7 @@
 package servlet;
 
 import dao.usDAO;
+import model.Assessor;
 import model.Usuario;
 
 import org.apache.commons.fileupload.FileItem;
@@ -33,15 +34,11 @@ public class CreateUsServlet extends HttpServlet {
         String us_nome = req.getParameter("us-nome");
         String us_email = req.getParameter("us-email");
         String us_nasc = req.getParameter("us-nasc");
-        String us_pass = "@123";
+        String us_pass = "";
 
         Usuario us = new Usuario(us_img, us_nome, us_email, us_nasc, us_pass);
-        boolean saida = new usDAO().addUser(us);
-        if (saida) {
-            req.getRequestDispatcher("optionUS.html").forward(req, resp);
-        } else {
-            resp.sendRedirect("criaUS.html");
-        }
+        req.getSession().setAttribute("usC", us);
+        req.getRequestDispatcher("senhaUS.html").forward(req, resp);
     }
 
     private Map<String, String> uploadImage(HttpServletRequest httpServletRequest) {

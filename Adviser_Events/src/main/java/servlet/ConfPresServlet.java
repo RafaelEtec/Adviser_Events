@@ -14,12 +14,11 @@ import java.io.IOException;
 public class ConfPresServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String ev_id = req.getParameter("ev_id");
-        Assessor as_id = (Assessor) req.getSession().getAttribute("ass");
-        System.out.println(ev_id + "\t" + as_id);
-        boolean saida = new evDAO().alterarPresenca(ev_id, as_id.getId());
+        int ev_id = Integer.parseInt(req.getParameter("ev_id"));
+        Assessor ass = (Assessor) req.getSession().getAttribute("ass");
+        System.out.println(ev_id + "\t" + ass.getId() + "\t");
+        new evDAO().alterarPresenca(ev_id, ass.getId());
 
-        System.out.println(saida);
         resp.sendRedirect("list-events-as");
     }
 }

@@ -9,9 +9,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class asDAO {
-    public void addUser(Assessor as) {
+    public boolean addUser(Assessor as) {
         String sql = "INSERT INTO TB_ASSESSOR (as_NOME, as_EMAIl, as_CPF, as_NUM, as_NASC, as_END, as_PASS) VALUES (?,?,?,?,?,?,?)";
-
+        boolean saida = false;
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
             System.out.println("Conectado");
@@ -25,10 +25,13 @@ public class asDAO {
             ps.setString(7, as.getPass());
             ps.execute();
             System.out.println("Sucesso no cadastro!");
+            saida = true;
             con.close();
         } catch (Exception ex) {
             System.out.println("Erro no cadastro!");
         }
+        System.out.println(saida);
+        return saida;
     }
 
     public boolean login(String email, String pass) {
@@ -61,12 +64,13 @@ public class asDAO {
     }
 
     public Assessor pegaPorEmail(String email) {
-        String sql = "SELECT as_ID, as_IMG, as_NOME, as_EMAIL, as_CPF, as_NUM, as_NASC, as_END FROM tb_ASSESSOR WHERE as_ID = ?";
+        String sql = "SELECT as_ID, as_IMG, as_NOME, as_EMAIL, as_CPF, as_NUM, as_NASC, as_END, as_PASS FROM tb_ASSESSOR WHERE as_EMAIL = ?";
         Assessor ass = new Assessor();
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
             System.out.println("Conectado");
             PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, email);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
@@ -78,8 +82,9 @@ public class asDAO {
                 String as_NUM = rs.getString("as_NUM");
                 String as_NASC = rs.getString("as_NASC");
                 String as_END = rs.getString("as_END");
+                String as_PASS = rs.getString("as_PASS");
 
-                ass = new Assessor(as_ID, as_IMG, as_NOME, as_EMAIL, as_CPF, as_NUM, as_NASC, as_END);
+                ass = new Assessor(as_ID, as_IMG, as_NOME, as_EMAIL, as_CPF, as_NUM, as_NASC, as_END, as_PASS);
             }
             System.out.println("Sucesso na pesquisa!");
             con.close();

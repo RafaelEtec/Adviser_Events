@@ -20,10 +20,10 @@ public class CreateAsServlet extends HttpServlet {
         String as_num = req.getParameter("as-num");
         String as_nasc = req.getParameter("as-nasc");
         String as_end = req.getParameter("as-end");
-        String as_pass = "@123";
+        String as_pass = "";
 
         Assessor as = new Assessor(as_img, as_nome, as_email, as_cpf, as_num, as_nasc, as_end, as_pass);
-        new asDAO().addUser(as);
-        req.getRequestDispatcher("optionAS.html").forward(req, resp);
+        req.getSession().setAttribute("assC", as);
+        req.getRequestDispatcher("senhaAS.html").forward(req, resp);
     }
 }

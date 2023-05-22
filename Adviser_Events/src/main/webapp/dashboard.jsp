@@ -14,7 +14,7 @@
     <body>
         <header>
             <div class="divLogo">
-                <img class="logo" src="imgs/logo.png" alt="Logo Adviser events">
+                <img class="logo" src="img/logo.png" alt="Logo Adviser events">
             </div>
             <div class="divPesq">
                 <table>

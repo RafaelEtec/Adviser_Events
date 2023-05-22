@@ -11,5 +11,7 @@ model\Assessor.class
 servlet\CreateUsServlet.class
 dao\asDAO.class
 model\Evento.class
+servlet\SenhaAsServlet.class
+servlet\SenhaUsServlet.class
 servlet\ConfPresServlet.class
 servlet\LoginAsServlet.class

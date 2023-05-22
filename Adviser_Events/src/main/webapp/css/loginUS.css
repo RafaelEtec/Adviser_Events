@@ -118,3 +118,13 @@ a {
     border-bottom: 1px solid lightgrey;
     font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
 }
+
+.btnAvancarUS {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    background: grey;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    width: 20.4%;
+    height: 40px;
+}

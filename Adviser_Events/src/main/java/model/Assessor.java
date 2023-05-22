@@ -9,7 +9,7 @@ public class Assessor {
     private String num;
     private String nasc;
     private String end;
-    private String pass = "@123";
+    private String pass;
 
     public Assessor() {}
 
@@ -32,6 +32,18 @@ public class Assessor {
         this.num = num;
         this.nasc = nasc;
         this.end = end;
+    }
+
+    public Assessor(int id, String img, String nome, String email, String cpf, String num, String nasc, String end, String pass) {
+        this.id = id;
+        this.img = img;
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+        this.num = num;
+        this.nasc = nasc;
+        this.end = end;
+        this.pass = pass;
     }
 
     public int getId() {
