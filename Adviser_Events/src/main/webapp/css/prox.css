@@ -3,10 +3,13 @@ html {
     overflow-y: hidden;
 }
 
+.imagem {
+    width:50px;
+    height:50px;
+}
+
 .btnVoltar {
-    background-image: url("/img/returnArrow.png") no-repeat;
     background-position: center;
-    background-repeat: no-repeat;
     border: none;
     width: 50px;
     height: 50px;

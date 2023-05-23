@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <head>
         <meta charset="UTF-8">
@@ -19,7 +19,7 @@
             <div>
                 <form action="/search-ev" method="get">
                     <input class="evP" type="search" id="ev_p" name="ev_p">
-                    <button class="btnP" type="submit">lupa</button>
+                    <button class="btnP" type="submit"><img class="imgP" src="/img/search.png"></img></button>
                 </form>
             </div>
 
@@ -27,7 +27,9 @@
                 <c:forEach var="ev" items="${eventos}">
                     <table>
                         <tr>
-                            <td><img class="imgEV" src="/img/defaultEV.png"></td>
+                            <form action="/info-ev" method="get">
+                                <td><button class="" type="submit"><img class="imgEV" src="/img/defaultEV.png"></button></td>
+                            </form>
                             <td class="tdData">${ev.data}</td>
                             <td class="tdHora">${ev.hora}Hr</td>
                             <td>

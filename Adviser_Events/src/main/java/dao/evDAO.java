@@ -35,6 +35,28 @@ public class evDAO {
         return saida;
     }
 
+    public boolean deleteEvent(int ev, int id) {
+        String sql = "DELETE tb_EVENTO WHERE ev_ID = ? and ev_ASS = ?";
+        boolean saida = false;
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, ev);
+            ps.setInt(2, id);
+            int l = ps.executeUpdate();
+            if (l > 0) {
+                saida = true;
+                System.out.println("Sucesso na exclusão");
+            }
+            con.close();
+        } catch (Exception ex) {
+            System.out.println("Erro na exclusão!");
+        }
+        return saida;
+    }
+
     public List<Evento> listEvents() {
         String sql = "SELECT ev_ID, ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS FROM tb_EVENTO";
 
