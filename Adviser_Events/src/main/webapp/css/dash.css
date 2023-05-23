@@ -34,23 +34,68 @@ button {
     height: 200px;
 }
 
+.tdImg {
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.tdNome {
+    padding-left: 5px;
+}
+
+.tdHora {
+    padding-left: 20px;
+    padding-right: 160px;
+}
+
+.imgEV {
+    width: 20px;
+    height: 20px;
+}
+
+table {
+    margin-top: 5px;
+}
+
+.tdPre {
+    padding-left: 20px;
+}
+
 .divPesq {
     position: absolute;
     width: auto;
     height: auto;
-    top: 40%;
-    left: 5%;
+    top: 30%;
+    left: 20%;
+}
+
+.tdLocal {
+    padding-left: 5px;
+    padding-bottom: 5px;
 }
 
 .btnPre {
-    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
     background-color: white;
+    width: 20px;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btnCom {
+    width: 20px;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .tdData {
     padding-left: 30em;
 }
 
-.divContent {
-    padding-top: 0.2em;
+.imgEV {
+    width:50px;
+    height:50px;
+    position: relative:
+    top: -20px;
 }

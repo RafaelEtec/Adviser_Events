@@ -17,8 +17,10 @@ public class ListEventoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Evento> eventos = new evDAO().listEvents();
+        int total = eventos.size();
         req.setAttribute("eventos", eventos);
         req.setAttribute("id", req.getSession().getAttribute("as_id"));
+        req.setAttribute("total", total);
         req.getRequestDispatcher("dashboardAS.jsp").forward(req,resp);
     }
 }

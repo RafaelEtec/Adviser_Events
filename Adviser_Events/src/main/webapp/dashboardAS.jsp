@@ -15,37 +15,34 @@
             <div class="divLogo">
                 <img class="logo" src="img/logo.png" alt="Logo Adviser events">
             </div>
+
+
             <div class="divPesq">
-                <table>
-                <hr>
-                    <c:forEach var="ev" items="${eventos}">
-                        <div class="divContent">
-                            <tr>
-                                <td class="tdImg">#IMAGEM#</td>
-                                    <td class="tdData">${ev.data}</td>
-                                    <td class="tdHora">${ev.hora}Hr</td>
-                                    <td>
-                                       <form action="/conf-presenca" method="post">
-                                       <input type="hidden" id="ev_id" name="ev_id" value="${ev.id}">
-                                       <button class="btnPre" type="submit">confirmar</button>
-                                       </form>
-                                    </td>
-                                    <td>
-                                       <button>compartilhar</button>
-                                    </td>
-                                <tr>
-                                    <td>${ev.id}</td>
-                                    <td class="tdNome">${ev.nome}</td>
-                                    <td class="tdDesc">${ev.desc}</td>
-                                </tr>
-                                <tr>
-                                    <td class="tdLocal">${ev.local}</td>
-                                    <td class="tdPre">${ev.pre}</td>
-                                </tr>
-                            </tr>
-                        </div>
-                    </c:forEach>
-                </table>
+                <c:forEach var="ev" items="${eventos}">
+                    <table>
+                        <tr>
+                            <img class="imgEV" src="/img/defaultEV.png">
+                            <td class="tdData">${ev.data}</td>
+                            <td class="tdHora">${ev.hora}Hr</td>
+                            <td>
+                               <form action="/conf-presenca" method="post">
+                               <input type="hidden" id="ev_id" name="ev_id" value="${ev.id}">
+                               <button class="btnPre" type="submit"></button>
+                               </form>
+                            </td>
+                            <td>
+                               <button class="btnCom"></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdNome">${ev.nome}</td>
+                        </tr>
+                        <tr>
+                            <td class="tdLocal">${ev.local}</td>
+                            <td class="tdPre">${ev.pre}</td>
+                        </tr>
+                    </table>
+                </c:forEach>
             </div>
         </header>
         <form action="/list-events-as" method="get">
