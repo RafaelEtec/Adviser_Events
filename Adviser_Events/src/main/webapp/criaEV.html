@@ -12,28 +12,29 @@
     <body>
     <header class="container">
         <div class="divVoltar">
-            <button class="btnVoltar" >
-                <a href="dashboard.jsp">Voltar</a>
-            </button>
+            <form action="/list-events-as" method="get">
+                <button class="btnVoltar" type="submit">Voltar</a></button>
+            </form>
+
         </div>
 
         <div class="divTitle">
             <p class="pCrie">Publique um Evento</p>
         </div>
 
-        <div class="divFormEV">
+        <div class="divFormAS">
             <form action="/create-ev" method="post">
-                <label class="lblEv">Nome do Evento</label><br>
-                <input class="inpEv" type="text" name="ev-nome" id="ev-nome"><br>
-                <label class="lblEv">Descrição</label><br>
-                <input class="inpEv" type="text" name="ev-desc" id="ev-desc"><br>
-                <label class="lblEv">Data</label><br>
-                <input class="inpEv" type="text" name="ev-data" id="ev-data"><br>
-                <label class="lblEv">Hora</label><br>
-                <input class="inpEv" type="text" name="ev-hora" id="ev-hora"><br>
-                <label class="lblEv">Endereço</label><br>
-                <input class="inpEv" type="text" name="ev-local" id="ev-local"><br>
-                <button class="btnPublicarEV" type="submit">Publicar</button>
+                <label class="lblUs">Nome do Evento</label><br>
+                <input class="inpUs" type="text" name="ev-nome" id="ev-nome"><br>
+                <label class="lblUs">Descrição</label><br>
+                <input class="inpUs" type="text" name="ev-desc" id="ev-desc"><br>
+                <label class="lblUs">Data</label><br>
+                <input class="inpUs" type="date" name="ev-data" id="ev-data"><br>
+                <label class="lblUs">Hora</label><br>
+                <input class="inpUs" type="time" name="ev-hora" id="ev-hora"><br>
+                <label class="lblUs">Endereço</label><br>
+                <input class="inpUs" type="text" name="ev-local" id="ev-local"><br>
+                <button class="btnPublicarUs" type="submit">Publicar</button>
             </form>
         </div>
         <div class="divLogo">

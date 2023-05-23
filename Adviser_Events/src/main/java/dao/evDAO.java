@@ -68,13 +68,14 @@ public class evDAO {
         }
     }
 
-    public List<Evento> pesquisa(String txt) {
-        String sql = "SELECT ev_ID, ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS FROM tb_EVENTO WHERE ev_NOME LIKE '%?%'";
+    public List<Evento> search(String txt) {
+        String sql = "SELECT ev_ID, ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS FROM tb_EVENTO WHERE ev_NOME LIKE ?";
 
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
             System.out.println("Conectado");
             PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, "%" + txt + "%");
             ResultSet rs = ps.executeQuery();
             List<Evento> ev = new ArrayList<>();
 
@@ -93,7 +94,6 @@ public class evDAO {
             }
             System.out.println("Sucesso na pesquisa!");
             con.close();
-
             return ev;
         } catch (Exception ex) {
             System.out.println("Erro na pesquisa");

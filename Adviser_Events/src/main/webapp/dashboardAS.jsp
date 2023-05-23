@@ -16,12 +16,18 @@
                 <img class="logo" src="img/logo.png" alt="Logo Adviser events">
             </div>
 
+            <div>
+                <form action="/search-ev" method="get">
+                    <input class="evP" type="search" id="ev_p" name="ev_p">
+                    <button class="btnP" type="submit">lupa</button>
+                </form>
+            </div>
 
             <div class="divPesq">
                 <c:forEach var="ev" items="${eventos}">
                     <table>
                         <tr>
-                            <img class="imgEV" src="/img/defaultEV.png">
+                            <td><img class="imgEV" src="/img/defaultEV.png"></td>
                             <td class="tdData">${ev.data}</td>
                             <td class="tdHora">${ev.hora}Hr</td>
                             <td>

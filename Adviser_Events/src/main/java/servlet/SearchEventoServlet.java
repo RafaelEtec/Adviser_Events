@@ -11,15 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/list-events-as")
-public class ListEventoServlet extends HttpServlet {
+@WebServlet("/search-ev")
+public class SearchEventoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Evento> eventos = new evDAO().listEvents();
+        String txt = req.getParameter("ev_p");
+        List<Evento> eventos = new evDAO().search(txt);
         int total = eventos.size();
         req.setAttribute("eventos", eventos);
         req.setAttribute("id", req.getSession().getAttribute("as_id"));
         req.setAttribute("total", total);
-        req.getRequestDispatcher("dashboardAS.jsp").forward(req,resp);
+        req.getRequestDispatcher("dashboardAS.jsp").forward(req, resp);
     }
 }
