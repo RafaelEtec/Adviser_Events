@@ -23,7 +23,13 @@
                 </form>
             </div>
 
-            <p class="pTotal">Eventos encontrados: ${total}</p>
+            <div class="divInfo">
+                <form action="/info-as" method="get">
+                    <button class="btnInfo" type="submit"><img class="imgFoto" src="/img/defaultPFP.jpg"></img></button>
+                </form>
+            </div>
+
+            <p class="pTotal">${total} Eventos</p>
 
             <div class="divPesq">
                 <c:forEach var="ev" items="${eventos}">
