@@ -23,6 +23,12 @@ button {
 
 }
 
+.btnInfo {
+    border: none;
+    background: none;
+    background-color: none;
+}
+
 .divLogo {
     position: absolute;
     top: 10%;
@@ -39,15 +45,6 @@ button {
     padding-top: 10px;
 }
 
-.tdNome {
-    padding-left: 5px;
-}
-
-.tdHora {
-    padding-left: 20px;
-    padding-right: 160px;
-}
-
 .imgEV {
     width: 20px;
     height: 20px;
@@ -57,25 +54,18 @@ table {
     margin-top: 5px;
 }
 
-.tdPre {
-    padding-left: 20px;
-}
-
 .divPesq {
     position: absolute;
     width: auto;
     height: auto;
     top: 30%;
-    left: 20%;
-}
-
-.tdLocal {
-    padding-left: 5px;
-    padding-bottom: 5px;
+    left: 32%;
 }
 
 .btnPre {
-    background-color: white;
+    background-color: none;
+    border: none;
+    background: none;
     width: 20px;
     height: 20px;
     padding-left: 10px;
@@ -85,19 +75,24 @@ table {
 .btnCom {
     width: 20px;
     height: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background-color: none;
+    border: none;
+    background: none;
 }
 
-.tdData {
-    padding-left: 30em;
+.imgCom {
+    width: 20px;
+    height: 20px;
 }
 
 .imgEV {
-    width:50px;
-    height:50px;
-    position: relative:
-    top: -20px;
+    width:100px;
+    height:100px;
+}
+
+.imgHeart {
+    width: 20px;
+    height: 20px;
 }
 
 .btnP {
@@ -114,4 +109,53 @@ table {
     top: 4px;
     width: 20px;
     height: 20px;
+}
+
+td {
+    padding-left: 0.4em;
+}
+
+.tdImg {
+    width: 8em;
+}
+
+.tdNome {
+    width: 24em;
+    font-weight: 800;
+    position: relative;
+    top: -2.4em;
+    font-size: 1.2em;
+}
+
+.tdHora {
+    width: 4em;
+    position: relative;
+    top: 2em;
+    left: -23.4em;
+}
+
+.tdPre {
+    position: relative;
+    left: 1em;
+    top: -2em;
+}
+
+.tdData {
+    position: relative;
+    top: 2em;
+}
+
+.tdLocal {
+    position: relative;
+    top: -2em;
+}
+
+.tdCon {
+    position: relative;
+    top: -2em;
+}
+
+.tdCom {
+    position: relative;
+    top: -2em;
 }
