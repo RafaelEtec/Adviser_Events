@@ -14,6 +14,7 @@ servlet\CreateUsServlet.class
 servlet\DeleteEv.class
 dao\asDAO.class
 model\Evento.class
+servlet\LogoutAs.class
 servlet\SenhaAsServlet.class
 servlet\SenhaUsServlet.class
 servlet\ConfPresServlet.class

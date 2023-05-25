@@ -79,6 +79,10 @@
       cursor: pointer;
     }
 
+    a:link {
+        text-decoration: none;
+    }
+
     .button:hover {
       background-color: #e2e2e2;
     }
@@ -95,14 +99,17 @@
     <a href="#" class="button">Telefone: ${as.num}</a><br>
     <a href="#" class="button">Data de Nascimento: ${as.nasc}</a><br>
     <a href="#" class="button">Gerenciar Conta</a><br>
+    <form action="/logout-as" method="get">
+        <button type="submit" class="button">Logout</button><br>
+    </form>
     <button class="buttonE"><a href="criaEV.html">Criar Evento</a></button>
 </div>
 <div class="divS">
             <div class="divLogo">
-                            <form action="/list-events-as" method="get">
-                                <button class="btnLogo" type="submit"><img class="logo" src="img/logo.png" alt="Logo Adviser events"></button>
-                            </form>
-                        </div>
+                <form action="/list-events-as" method="get">
+                    <button class="btnLogo" type="submit"><img class="logo" src="img/logo.png" alt="Logo Adviser events"></button>
+                </form>
+                </div>
                 <form action="/search-ev-as" method="get">
                     <input class="evP" type="search" id="ev_p" name="ev_p">
                     <button class="btnP" type="submit"><img class="imgP" src="/img/search.png"></img></button>
