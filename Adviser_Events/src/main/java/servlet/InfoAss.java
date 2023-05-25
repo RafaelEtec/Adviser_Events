@@ -12,17 +12,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/search-ev-as")
-public class ListEventByAss extends HttpServlet{
-
+@WebServlet("/info-as")
+public class InfoAss extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String txt = req.getParameter("ev_p");
         Assessor as = (Assessor) req.getSession().getAttribute("ass");
-        List<Evento> ev = new evDAO().searchByAss(txt, as.getId());
+        List<Evento> ev = new evDAO().listEventsByAss(as.getId());
         int total = ev.size();
         req.setAttribute("ev", ev);
+        req.setAttribute("id", req.getSession().getAttribute("as_id"));
         req.setAttribute("total", total);
-        req.getRequestDispatcher("infoAS.jsp").forward(req,resp);
+        req.setAttribute("as", as);
+        req.getRequestDispatcher("infoAS.jsp").forward(req, resp);
     }
 }

@@ -61,9 +61,5 @@
                 </c:forEach>
             </div>
         </header>
-        <form action="/list-events-as" method="get">
-            <button type="submit">Atualizar</a></button>
-        </form>
-        <button><a href="criaEV.html">Criar Evento</a></button>
     </body>
 </html>

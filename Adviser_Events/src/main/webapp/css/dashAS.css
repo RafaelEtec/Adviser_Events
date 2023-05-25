@@ -1,0 +1,206 @@
+body {
+    background-color: white;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+th {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+td {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+
+}
+
+.btnInfo {
+    border: none;
+    background: none;
+    background-color: none;
+}
+
+.divLogo {
+    position: fixed;
+    top: 2%;
+    left: 1%;
+}
+
+.divS {
+    width: 1000px;
+    position: relative;
+    top: 40%;
+    left: 34%;
+}
+
+.pTotal {
+    font-family: 'Open Sans', sans-serif;"Plus Jakarta Sans";
+    font-size: 1.2em;
+    font-weight: 800;
+    position: absolute;
+    top: 98%;
+    left: 34%;
+}
+
+.evP {
+    width: 640px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.logo {
+    width: 160px;
+    height: 120px;
+}
+
+.divInfo {
+    position: fixed;
+    top: 2%;
+    left: 92%;
+}
+
+.btnLogo {
+    background: none;
+    background-color: none;
+    border: none;
+    border-style: none;
+}
+
+.tdImg {
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.imgEV {
+    width: 20px;
+    height: 20px;
+}
+
+table {
+    margin-top: 5px;
+}
+
+.divPesq {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 110%;
+    left: 32%;
+}
+
+.btnPre {
+    background-color: none;
+    border: none;
+    background: none;
+    width: 20px;
+    height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btnCom {
+    width: 20px;
+    height: 20px;
+    background-color: none;
+    border: none;
+    background: none;
+}
+
+.imgCom {
+    width: 20px;
+    height: 20px;
+}
+
+.imgEV {
+    width:100px;
+    height:100px;
+}
+
+.imgHeart {
+    width: 20px;
+    height: 20px;
+}
+
+.btnP {
+    margin-top: 4px;
+    background: white;
+    width: 10px;
+    height: 10px;
+    border: none;
+    align-content: center;
+}
+
+.btnInfo {
+
+}
+
+.imgFoto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.imgP {
+    position: relative;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+td {
+    padding-left: 0.4em;
+}
+
+.tdImg {
+    width: 8em;
+}
+
+.tdNome {
+    width: 24em;
+    font-weight: 800;
+    position: relative;
+    top: -2.4em;
+    font-size: 1.2em;
+}
+
+.tdHora {
+    width: 4em;
+    position: relative;
+    top: 2em;
+    left: -23.4em;
+}
+
+.tdPre {
+    position: relative;
+    left: 1em;
+    top: -2em;
+}
+
+.tdData {
+    position: relative;
+    top: 2em;
+}
+
+.tdLocal {
+    position: relative;
+    top: -2em;
+}
+
+.tdCon {
+    position: relative;
+    top: -2em;
+}
+
+.tdCom {
+    position: relative;
+    top: -2em;
+}

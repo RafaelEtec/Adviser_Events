@@ -35,9 +35,8 @@ public class evDAO {
         return saida;
     }
 
-    public boolean deleteEvent(int ev, int id) {
-        String sql = "DELETE tb_EVENTO WHERE ev_ID = ? and ev_ASS = ?";
-        boolean saida = false;
+    public void deleteEvent(int ev, int id) {
+        String sql = "DELETE tb_EVENTO WHERE ev_ID = ? and ev_ASSESSOR = ?";
 
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -47,14 +46,12 @@ public class evDAO {
             ps.setInt(2, id);
             int l = ps.executeUpdate();
             if (l > 0) {
-                saida = true;
                 System.out.println("Sucesso na exclusão");
             }
             con.close();
         } catch (Exception ex) {
             System.out.println("Erro na exclusão!");
         }
-        return saida;
     }
 
     public List<Evento> listEvents() {
@@ -83,6 +80,40 @@ public class evDAO {
             System.out.println("Sucesso na pesquisa!");
             con.close();
 
+            return ev;
+        } catch (Exception ex) {
+            System.out.println("Erro na pesquisa");
+            return Collections.emptyList();
+        }
+    }
+
+    public List<Evento> searchByAss(String txt, int id) {
+        String sql = "SELECT ev_ID, ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS FROM tb_EVENTO WHERE ev_NOME LIKE ? AND ev_ASSESSOR = ?";
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, "%" + txt + "%");
+            ps.setInt(2, id);
+            ResultSet rs = ps.executeQuery();
+            List<Evento> ev = new ArrayList<>();
+
+            while (rs.next()) {
+                int ev_ID = rs.getInt("ev_ID");
+                String ev_NOME = rs.getString("ev_NOME");
+                String ev_DESC = rs.getString("ev_DESC");
+                String ev_DATA = rs.getString("ev_DATA");
+                String ev_HORA = rs.getString("ev_HORA");
+                String ev_LOCAL= rs.getString("ev_LOCAL");
+                int ev_ASS = rs.getInt("ev_ASSESSOR");
+                int ev_PRE = rs.getInt("ev_PRESENCAS");
+
+                Evento evento = new Evento(ev_ID, ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASS, ev_PRE);
+                ev.add(evento);
+            }
+            System.out.println("Sucesso na pesquisa!");
+            con.close();
             return ev;
         } catch (Exception ex) {
             System.out.println("Erro na pesquisa");
@@ -124,7 +155,7 @@ public class evDAO {
     }
 
     public List<Evento> listEventsByAss(int id) {
-        String sql = "SELECT ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS FROM tb_EVENTO WHERE id_ASS = ?";
+        String sql = "SELECT ev_ID, ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS FROM tb_EVENTO WHERE ev_ASSESSOR = ?";
 
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -135,6 +166,7 @@ public class evDAO {
             List<Evento> ev = new ArrayList<>();
 
             while (rs.next()) {
+                int ev_ID = rs.getInt("ev_ID");
                 String ev_NOME = rs.getString("ev_NOME");
                 String ev_DESC = rs.getString("ev_DESC");
                 String ev_DATA = rs.getString("ev_DATA");
@@ -143,7 +175,7 @@ public class evDAO {
                 int ev_ASS = rs.getInt("ev_ASSESSOR");
                 int ev_PRE = rs.getInt("ev_PRESENCAS");
 
-                Evento evento = new Evento(ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASS, ev_PRE);
+                Evento evento = new Evento(ev_ID, ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASS, ev_PRE);
                 ev.add(evento);
             }
             System.out.println("Sucesso na pesquisa!");

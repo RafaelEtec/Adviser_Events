@@ -93,4 +93,35 @@ public class asDAO {
         }
         return ass;
     }
+
+    public Assessor pegaPorId(int id) {
+        String sql = "SELECT as_ID, as_IMG, as_NOME, as_EMAIL, as_CPF, as_NUM, as_NASC, as_END, as_PASS FROM tb_ASSESSOR WHERE as_ID = ?";
+        Assessor ass = new Assessor();
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int as_ID = rs.getInt("as_ID");
+                String as_IMG = rs.getString("as_IMG");
+                String as_NOME = rs.getString("as_NOME");
+                String as_EMAIL = rs.getString("as_EMAIL");
+                String as_CPF = rs.getString("as_CPF");
+                String as_NUM = rs.getString("as_NUM");
+                String as_NASC = rs.getString("as_NASC");
+                String as_END = rs.getString("as_END");
+                String as_PASS = rs.getString("as_PASS");
+
+                ass = new Assessor(as_ID, as_IMG, as_NOME, as_EMAIL, as_CPF, as_NUM, as_NASC, as_END, as_PASS);
+            }
+            System.out.println("Sucesso na pesquisa!");
+            con.close();
+        } catch (Exception ex) {
+            System.out.println("Erro na busca!");
+        }
+        return ass;
+    }
 }

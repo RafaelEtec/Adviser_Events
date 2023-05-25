@@ -2,9 +2,11 @@ C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\Lo
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\dao\asDAO.java
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\model\Evento.java
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\model\Usuario.java
+C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\DeleteEv.java
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\SenhaUsServlet.java
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\SearchEventoServlet.java
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\ListEventByAss.java
+C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\InfoAss.java
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\SenhaAsServlet.java
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\dao\usDAO.java
 C:\Users\raf\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\ConfPresServlet.java
