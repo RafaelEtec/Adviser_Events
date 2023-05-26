@@ -1,6 +1,9 @@
 package servlet;
 
+import dao.asDAO;
 import dao.usDAO;
+import model.Assessor;
+import model.Usuario;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +23,8 @@ public class LoginUsServlet extends HttpServlet{
         System.out.println(us_email + "\t" + us_pass);
         boolean resposta = new usDAO().login(us_email, us_pass);
         if (resposta) {
+            Usuario us = new usDAO().pegaPorEmail(us_email);
+            req.getSession().setAttribute("us", us);
             resp.sendRedirect("list-events-us");
         } else {
             resp.sendRedirect("loginUS.html");

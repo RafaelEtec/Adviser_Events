@@ -1,5 +1,6 @@
 package dao;
 
+import model.Assessor;
 import model.Usuario;
 
 import java.sql.*;
@@ -103,5 +104,33 @@ public class usDAO {
             System.out.println("Erro na exclusão!");
         }
         return saida;
+    }
+
+    public Usuario pegaPorEmail(String email) {
+        String sql = "SELECT us_ID, us_IMG, us_NOME, us_EMAIL, as_NASC, as_PASS FROM tb_USUARIO WHERE us_EMAIL = ?";
+        Usuario us = new Usuario();
+        try {
+            Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+            System.out.println("Conectado");
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int us_ID = rs.getInt("us_ID");
+                String us_IMG = rs.getString("us_IMG");
+                String us_NOME = rs.getString("us_NOME");
+                String us_EMAIL = rs.getString("us_EMAIL");
+                String us_NASC = rs.getString("us_NASC");
+                String us_PASS = rs.getString("us_PASS");
+
+                us = new Usuario(us_ID, us_IMG, us_NOME, us_EMAIL, us_NASC, us_PASS);
+            }
+            System.out.println("Sucesso na pesquisa!");
+            con.close();
+        } catch (Exception ex) {
+            System.out.println("Erro na busca!");
+        }
+        return us;
     }
 }

@@ -10,9 +10,12 @@ C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\mai
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\LoginUsServlet.java
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\dao\asDAO.java
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\CreateUsServlet.java
+C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\infoUs.java
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\model\Usuario.java
+C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\ConfPresAs.java
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\CreateEventServlet.java
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\LogoutAs.java
+C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\LogoutUs.java
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\model\Evento.java
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\SenhaAsServlet.java
 C:\Users\vinicius.soliveira63\IdeaProjects\Adviser_Events\Adviser_Events\src\main\java\servlet\ConfPresServlet.java

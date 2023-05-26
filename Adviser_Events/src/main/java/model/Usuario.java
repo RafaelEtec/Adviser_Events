@@ -1,7 +1,7 @@
 package model;
 
 public class Usuario {
-    private String id;
+    private int id;
     private String img;
     private String nome;
     private String email;
@@ -18,11 +18,20 @@ public class Usuario {
         this.pass = pass;
     }
 
-    public String getId() {
+    public Usuario(int id, String img, String nome, String email, String nasc, String pass) {
+        this.id = id;
+        this.img = img;
+        this.nome = nome;
+        this.email = email;
+        this.nasc = nasc;
+        this.pass = pass;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
