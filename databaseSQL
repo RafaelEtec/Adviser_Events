@@ -35,3 +35,27 @@ CREATE TABLE tb_PRESENCAS (
     pr_ev_id INT NOT NULL,
     pr_us_id INT NOT NULL
 );
+
+INSERT INTO tb_EVENTO (ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS) VALUES
+('Evento 11', 'Descrição Evento 11', '2023-06-11', '23:00', 'Rua do Evento 1', '1', '6'),
+('Evento 21', 'Descrição Evento 21', '2023-06-12', '23:00', 'Rua do Evento 2', '2', '12'),
+('Evento 3', 'Descrição Evento 3', '2023-06-13', '23:00', 'Rua do Evento 3', '1', '4'),
+('Evento 4', 'Descrição Evento 4', '2023-06-14', '23:00', 'Rua do Evento 4', '1', '21'),
+('Evento 5', 'Descrição Evento 5', '2023-06-15', '23:00', 'Rua do Evento 5', '1', '14'),
+('Evento 6', 'Descrição Evento 6', '2023-06-16', '23:00', 'Rua do Evento 6', '1', '9'),
+('Evento 7', 'Descrição Evento 7', '2023-06-17', '23:00', 'Rua do Evento 7', '2', '2'),
+('Evento 8', 'Descrição Evento 8', '2023-06-18', '23:00', 'Rua do Evento 8', '1', '51'),
+('Evento 9', 'Descrição Evento 9', '2023-06-19', '23:00', 'Rua do Evento 9', '2', '2'),
+('Evento 10', 'Descrição Evento 10', '2023-06-20', '23:00', 'Rua do Evento 10', '1', '19');
+
+INSERT INTO tb_EVENTO (ev_NOME, ev_DESC, ev_DATA, ev_HORA, ev_LOCAL, ev_ASSESSOR, ev_PRESENCAS) VALUES
+('Evento 110', 'Descrição Evento 11', '2023-06-11', '23:00', 'Rua do Evento 1', '1', '6'),
+('Evento 210', 'Descrição Evento 21', '2023-06-12', '23:00', 'Rua do Evento 2', '2', '12'),
+('Evento 30', 'Descrição Evento 3', '2023-06-13', '23:00', 'Rua do Evento 3', '1', '4'),
+('Evento 40', 'Descrição Evento 4', '2023-06-14', '23:00', 'Rua do Evento 4', '1', '21'),
+('Evento 50', 'Descrição Evento 5', '2023-06-15', '23:00', 'Rua do Evento 5', '1', '14'),
+('Evento 60', 'Descrição Evento 6', '2023-06-16', '23:00', 'Rua do Evento 6', '1', '9'),
+('Evento 70', 'Descrição Evento 7', '2023-06-17', '23:00', 'Rua do Evento 7', '2', '2'),
+('Evento 80', 'Descrição Evento 8', '2023-06-18', '23:00', 'Rua do Evento 8', '1', '51'),
+('Evento 90', 'Descrição Evento 9', '2023-06-19', '23:00', 'Rua do Evento 9', '2', '2'),
+('Evento 100', 'Descrição Evento 10', '2023-06-20', '23:00', 'Rua do Evento 10', '1', '19');
