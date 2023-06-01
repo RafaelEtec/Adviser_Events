@@ -99,7 +99,6 @@
     <form action="/logout-us" method="get">
         <button type="submit" class="button">Logout</button><br>
     </form>
-    <button class="buttonE"><a href="criaEV.html">Criar Evento</a></button>
 </div>
 <div class="divS">
             <div class="divLogo">

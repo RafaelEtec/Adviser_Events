@@ -107,7 +107,7 @@ public class usDAO {
     }
 
     public Usuario pegaPorEmail(String email) {
-        String sql = "SELECT us_ID, us_IMG, us_NOME, us_EMAIL, as_NASC, as_PASS FROM tb_USUARIO WHERE us_EMAIL = ?";
+        String sql = "SELECT us_ID, us_IMG, us_NOME, us_EMAIL, us_NASC, us_PASS FROM tb_USUARIO WHERE us_EMAIL = ?";
         Usuario us = new Usuario();
         try {
             Connection con = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
